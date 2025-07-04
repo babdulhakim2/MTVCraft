@@ -8,6 +8,9 @@ import imageio
 import gc
 import torch
 import numpy as np
+
+torch.backends.cuda.matmul.allow_tf32 = True
+torch.backends.cudnn.benchmark = True
 from einops import rearrange
 
 

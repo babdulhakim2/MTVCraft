@@ -62,6 +62,18 @@ Besides, ffmpeg is also needed:
 apt-get install ffmpeg
 ```
 
+## 🚀 GPU Setup
+
+To run the provided scripts on an NVIDIA GPU such as the A40, set the `CUDA_VISIBLE_DEVICES` environment variable before launching a script. This selects which GPU(s) PyTorch will use.
+
+```bash
+export CUDA_VISIBLE_DEVICES=0       # use GPU 0
+# For multi-GPU training, specify multiple indices
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+```
+
+The training and inference scripts automatically detect the visible devices.
+
 ## 📥 Download Pretrained Models
 
 You can easily get all pretrained models required by inference from our [HuggingFace repo](https://huggingface.co/BAAI/MTVCraft).
